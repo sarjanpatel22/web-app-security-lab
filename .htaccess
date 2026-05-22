@@ -1,0 +1,11 @@
+# Apache hardening (applies when served by Apache, not the PHP dev server).
+# Disable automatic directory listing.
+Options -Indexes
+
+# Block direct web access to sensitive files.
+<FilesMatch "(config\.php|db\.php|\.htaccess)$">
+    Require all denied
+</FilesMatch>
+
+# Block the private/ folder entirely.
+RedirectMatch 403 ^/.*/private/.*$
