@@ -49,6 +49,30 @@ Traversal:  /download.php?file=../../../../etc/passwd
 ```
 Compare each against the `*_safe.php` version to see it blocked.
 
+## 📸 Proof (Screenshots)
+
+The five attacks demonstrated, and the hardened versions blocking them:
+
+**1 · SQL Injection**
+<img src="./screenshots/01-sqli.png" width="820" alt="SQL injection login bypass">
+<img src="./screenshots/01-sqli-payload.png" width="820" alt="SQL injection payload">
+
+**2 · Stored XSS**
+<img src="./screenshots/02-stored-xss.png" width="820" alt="Stored XSS in dashboard">
+
+**3 · Reflected XSS**
+<img src="./screenshots/03-reflected-xss.png" width="820" alt="Reflected XSS via msg param">
+
+**4 · Brute Force**
+<img src="./screenshots/04-bruteforce.png" width="820" alt="Hydra brute force">
+
+**5 · Directory Traversal**
+<img src="./screenshots/05-traversal.png" width="820" alt="Directory traversal to /etc/passwd">
+
+**Hardened fixes blocking the attacks**
+<img src="./screenshots/06-fix-traversal.png" width="820" alt="Traversal blocked by hardened version">
+<img src="./screenshots/07-fix-xss.png" width="820" alt="XSS blocked by output encoding">
+
 ## File structure
 ```
 vulnapp/
